@@ -3,17 +3,22 @@ import axios from "axios";
 
 const Context = React.createContext();
 
-<<<<<<< HEAD
 const reducer = (state, action) => {
   switch (action.type) {
     case "SEARCH_TRACKS":
       return {
         ...state,
         track_list: action.payload,
-        heading:"Search Results"
+        heading: "Search Results"
+      };
+    case "REFRESH_PAGE":
+      return {
+        ...state,
+        heading: "Top 10 Tracks",
+        track_list: action.payload
       };
     default:
-        return state;
+      return state;
   }
 };
 
@@ -22,12 +27,6 @@ export class Provider extends Component {
     track_list: [],
     heading: "Top 10 Tracks",
     dispatch: action => this.setState(state => reducer(state, action))
-=======
-export class Provider extends Component {
-  state = {
-    track_list: [],
-    heading: "Top 10 Tracks"
->>>>>>> master
   };
 
   getTrackList = () => {
@@ -38,42 +37,23 @@ export class Provider extends Component {
         }`
       )
       .then(res => {
-<<<<<<< HEAD
         res.data.message.body.track_list.map((each_t, i) => {
-            const { track } = each_t;
-            console.log(
-              `Getting ${track.track_name.split("-")[0]} ${
-                track.artist_name.split("feat")[0]
-              }..`
-            );
-            track["album_cover_art"] = this.getAlbumCover(
-              `${track.track_name.split("-")[0]} ${
-                track.artist_name.split("feat")[0]
-              }`
-            );
-            return track;
-          });
-          this.setState({
-            track_list: res.data.message.body.track_list
-          });
-=======
-        return res.data.message.body.track_list;
-      })
-      .then(res => {
-        res.map((each_t, i) => {
           const { track } = each_t;
           console.log(
-            `Getting ${track.track_name.split("-")[0]} ${track.artist_name.split("feat")[0]}..`
+            `Getting ${track.track_name.split("-")[0]} ${
+              track.artist_name.split("feat")[0]
+            }..`
           );
           track["album_cover_art"] = this.getAlbumCover(
-            `${track.track_name.split("-")[0]} ${track.artist_name.split("feat")[0]}`
+            `${track.track_name.split("-")[0]} ${
+              track.artist_name.split("feat")[0]
+            }`
           );
           return track;
         });
         this.setState({
-          track_list: res
+          track_list: res.data.message.body.track_list
         });
->>>>>>> master
       })
       .catch(err => console.log(err));
   };
@@ -97,36 +77,36 @@ export class Provider extends Component {
     this.getTrackList();
   }
 
-<<<<<<< HEAD
-  componentDidUpdate(prevProps,prevState){
+  componentDidUpdate(prevProps, prevState) {
     // check if track_list is updated.
     // if true, get album cover for updated list
-    if(prevState.track_list !== this.state.track_list){
-        const new_list = this.state.track_list
+    console.log("PROVIDER UPDATE");
+    if (prevState.track_list !== this.state.track_list) {
+      if (Object.keys(this.state.track_list).length !== 0) {
+        const new_list = this.state.track_list;
         new_list.map((each_t, i) => {
-            const { track } = each_t;
-            console.log(
-              `Getting ${track.track_name.split("-")[0]} ${
-                track.artist_name.split("feat")[0]
-              }..`
-            );
-            track["album_cover_art"] = this.getAlbumCover(
-              `${track.track_name.split("-")[0]} ${
-                track.artist_name.split("feat")[0]
-              }`
-            );
-            return track;
-          });
-          console.log(new_list)
+          const { track } = each_t;
+          console.log(
+            `Getting ${track.track_name.split("-")[0]} ${
+              track.artist_name.split("feat")[0]
+            }..`
+          );
+          track["album_cover_art"] = this.getAlbumCover(
+            `${track.track_name.split("-")[0]} ${
+              track.artist_name.split("feat")[0]
+            }`
+          );
+          return track;
+        });
+        console.log(new_list);
         this.setState({
-            track_list:new_list
-        })
-          
+          track_list: new_list
+        });
+      }else {
+        this.getTrackList();
+      }
     }
   }
-
-=======
->>>>>>> master
   render() {
     return (
       <Context.Provider value={this.state}>

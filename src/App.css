@@ -1,83 +1,94 @@
-.bg-container{
-    background-color: #333;
-    color: #08bd99;
-    position:fixed;
-    padding:0;
-    margin:0;
-    overflow: auto;
-    top:0;
-    left:0;
+.bg-container {
+  background-color: #333;
+  color: #08bd99;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-#navbar{
-<<<<<<< HEAD
-    color: #07deb2;
+#navbar {
+  color: #07deb2;
 }
 
-h3.text-center.mb-4{
-    color: #07deb2
+h3.text-center.mb-4 {
+  color: #07deb2;
 }
 
-div.card-body{
-    background-color: whitesmoke;
-    height: 20vh;
-    overflow: hidden;
-    color: #333;
-    padding:12px;
+div.card-body {
+  background-color: whitesmoke;
+  height: 20vh;
+  overflow: hidden;
+  color: #333;
+  padding: 12px;
 }
-div.col-md-3{
-    height: 30vh;
-}
-
-a.btn.btn-dark.btn-block{
-    vertical-align: center;
-    display: inline-block;
-    float: none;
-    color: #07deb2;
+div.col-md-3 {
+  height: 30vh;
 }
 
-h5.track-name{
-    line-height: 2.5ex;
-    height: 5.1ex;
-    text-overflow: ellipsis;
-    overflow:hidden;
-    white-space:pre-wrap;
-    line-clamp: 2;
-    margin-bottom: 5px;
+a.btn.btn-dark.btn-block {
+  vertical-align: center;
+  display: inline-block;
+  float: none;
+  color: #07deb2;
 }
 
-div.card-body.lyrics{
-    display: inline-block;
-    overflow: hidden;
-    height: auto;
+h5.track-name {
+  line-height: 2.5ex;
+  height: 5.1ex;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-wrap;
+  line-clamp: 2;
+  margin-bottom: 5px;
 }
 
-p.card-text.lyrics, div.card-body.lyrics{
-    color: #333;
-    background-color: whitesmoke;
-    white-space: pre
+div.card-body.lyrics {
+  display: inline-block;
+  overflow: hidden;
+  height: auto;
 }
 
-p.card-text.text-truncate{
-    margin-bottom: 0
+p.card-text.lyrics,
+div.card-body.lyrics {
+  color: #333;
+  background-color: whitesmoke;
+  white-space: pre;
 }
 
-div.card{
-    border:none;
+p.card-text.text-truncate {
+  margin-bottom: 0;
 }
 
-img.card-img{
-    object-fit: cover;
-    min-width: 100%;
-    min-height: 100%
+div.card {
+  border: none;
 }
 
+img.card-img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
 
-div.container-fluid{
-    padding:0 50px;
+div.img-container {
+  height: 0;
+  overflow: hidden;
+  padding-top: 100%;
+  background: white;
+  position: relative;
+}
+
+div.container-fluid {
+  padding: 0 50px;
 }
 
 .col-2dot4,
@@ -85,102 +96,47 @@ div.container-fluid{
 .col-md-2dot4,
 .col-lg-2dot4,
 .col-xl-2dot4 {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .col-2dot4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+@media (min-width: 540px) {
+  .col-sm-2dot4 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
     max-width: 20%;
-}
-@media (min-width: 540px) {
-    .col-sm-2dot4 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
+  }
 }
 @media (min-width: 720px) {
-    .col-md-2dot4 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
+  .col-md-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
 @media (min-width: 960px) {
-    .col-lg-2dot4 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
+  .col-lg-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
 @media (min-width: 1140px) {
-    .col-xl-2dot4 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-=======
-    color: #07deb2
-}
-
-h3.text-center.mb-4{
-    color: #07deb2
-}
-
-div.card-body{
-    background-color: whitesmoke;
-    height: 20vh;
-    overflow: hidden;
-    color: #333;
-    padding:12px;
-}
-div.col-md-3{
-    height: 30vh;
-}
-
-a.btn.btn-dark.btn-block{
-    vertical-align: center;
-    display: inline-block;
-    float: none;
-    color: #07deb2;
-}
-
-h5.track-name{
-    line-height: 2.5ex;
-    height: 5.1ex;
-    text-overflow: ellipsis;
-    overflow:hidden;
-    white-space:pre-wrap;
-    line-clamp: 2;
-    margin-bottom: 5px;
-}
-
-div.card-body.lyrics{
-    display: inline-block;
-    overflow: hidden;
-    height: auto;
-}
-
-p.card-text.lyrics, div.card-body.lyrics{
-    color: #333;
-    background-color: whitesmoke;
-    white-space: pre
-}
-
-p.card-text.text-truncate{
-    margin-bottom: 0
-}
-
-div.card{
-    border:none;
->>>>>>> master
+  .col-xl-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
