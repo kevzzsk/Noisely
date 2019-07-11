@@ -1,33 +1,69 @@
-.App {
-  text-align: center;
+.bg-container{
+    background-color: #333;
+    color: #08bd99;
+    position:fixed;
+    padding:0;
+    margin:0;
+    overflow: auto;
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#navbar{
+    color: #07deb2
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h3.text-center.mb-4{
+    color: #07deb2
 }
 
-.App-link {
-  color: #61dafb;
+div.card-body{
+    background-color: whitesmoke;
+    height: 20vh;
+    overflow: hidden;
+    color: #333;
+    padding:12px;
+}
+div.col-md-3{
+    height: 30vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a.btn.btn-dark.btn-block{
+    vertical-align: center;
+    display: inline-block;
+    float: none;
+    color: #07deb2;
+}
+
+h5.track-name{
+    line-height: 2.5ex;
+    height: 5.1ex;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:pre-wrap;
+    line-clamp: 2;
+    margin-bottom: 5px;
+}
+
+div.card-body.lyrics{
+    display: inline-block;
+    overflow: hidden;
+    height: auto;
+}
+
+p.card-text.lyrics, div.card-body.lyrics{
+    color: #333;
+    background-color: whitesmoke;
+    white-space: pre
+}
+
+p.card-text.text-truncate{
+    margin-bottom: 0
+}
+
+div.card{
+    border:none;
 }
