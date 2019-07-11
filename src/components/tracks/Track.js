@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import cover from "../../assets/Album.jpeg";
 
 class Track extends Component {
@@ -27,11 +28,25 @@ class Track extends Component {
         });
       }
     }
+=======
+import cover from '../../assets/Album.jpeg'
+
+class Track extends Component {
+  state={
+    album_art: cover
+  }
+
+  componentDidMount() {
+    this.props.track.album_cover_art.then(res => {
+      this.setState({ album_art: res===""?cover:res });
+    });
+>>>>>>> master
   }
 
   render() {
     const { track } = this.props;
     return (
+<<<<<<< HEAD
       <div className="col-md-2dot4 h-100">
         <div className="card mb-4 shadow-sm">
           <div className="img-container">
@@ -41,6 +56,15 @@ class Track extends Component {
               alt="card img"
             />
           </div>
+=======
+      <div className="col-md-3 h-100">
+        <div className="card mb-4 shadow-sm">
+          <img
+            className="card-img"
+            src={this.state.album_art}
+            alt="card img"
+          />
+>>>>>>> master
           <div className="card-body d-flex flex-column">
             <h5 className="track-name">{track.track_name}</h5>
             <p className="card-text text-truncate">

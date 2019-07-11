@@ -13,7 +13,11 @@ function App() {
       <Router>
         <div className="bg-container" id="bg-dark">
           <AppBar />
+<<<<<<< HEAD
           <div className="container-fluid">
+=======
+          <div className="container">
+>>>>>>> master
             <Switch>
               <Route exact path="/" component={Index} />
               <Route exact path="/lyrics/track/:id" component={Lyrics} />
