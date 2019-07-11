@@ -13,36 +13,40 @@ class Search extends Component {
     });
   };
 
-  findTrack = (dispatch, e) =>{
+  findTrack = (dispatch, e) => {
     e.preventDefault();
-    axios
-      .get(
-        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${
-          process.env.REACT_APP_MM_KEY
-        }`
-      )
-      .then(res => {
+    if (this.state.trackTitle !== "") {
+      axios
+        .get(
+          `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${
+            this.state.trackTitle
+          }&page_size=10&page=1&s_track_rating=desc&apikey=${
+            process.env.REACT_APP_MM_KEY
+          }`
+        )
+        .then(res => {
           console.log(res.data);
           dispatch({
-              type:"SEARCH_TRACKS",
-              payload: res.data.message.body.track_list
+            type: "SEARCH_TRACKS",
+            payload: res.data.message.body.track_list
           });
 
-          this.setState({trackTitle: ""})
-      })
-      .catch(err => console.log(err))
-  }
+          this.setState({ trackTitle: "" });
+        })
+        .catch(err => console.log(err));
+    }
+  };
 
   render() {
     return (
       <Consumer>
         {value => {
-            const {dispatch} = value;
+          const { dispatch } = value;
           return (
-            <div className="card mb-4 p-4">
+            <div className="card mb-4 p-4" id="searchbar">
               <h1 className="display-4 text-center">Search For A Song</h1>
               <p className="lead text-center">Get Lyrics for any song</p>
-              <form onSubmit={this.findTrack.bind(this,dispatch)}>
+              <form onSubmit={this.findTrack.bind(this, dispatch)}>
                 <div className="form-row">
                   <div className="form-group col-md-11 mb-2">
                     <input
@@ -55,7 +59,7 @@ class Search extends Component {
                     />
                   </div>
                   <div className="col-auto">
-                    <button className="btn btn-primary btn-lg">
+                    <button className="btn btn-outline-dark btn-lg rounded-circle">
                       <i className="fas fa-search" />
                     </button>
                   </div>

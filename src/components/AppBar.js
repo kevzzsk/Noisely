@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./AppBar.css";
 import { Consumer } from "../context";
+import { Link } from "react-router-dom";
 
 export default class AppBar extends Component {
   constructor(props) {
@@ -18,12 +19,12 @@ export default class AppBar extends Component {
     });
   }
 
-  refreshPage = (dispatch,e) => {
+  refreshPage = (dispatch, e) => {
     console.log("REFRESH PAGE");
     dispatch({
-      type:"REFRESH_PAGE",
+      type: "REFRESH_PAGE",
       payload: []
-    })
+    });
   };
 
   render() {
@@ -32,14 +33,16 @@ export default class AppBar extends Component {
         {value => {
           const { dispatch } = value;
           return (
-            <nav
-              className="navbar navbar-dark bg-dark mb-5"
-              onClick={this.refreshPage.bind(this,dispatch)}
-            >
-              <span className="navbar-brand mb-0 h1 mx-auto" id="navbar">
-                Noisely
-              </span>
-            </nav>
+            <Link to="/" className="text-decoration-none">
+              <nav
+                className="navbar navbar-dark bg-dark mb-5"
+                onClick={this.refreshPage.bind(this, dispatch)}
+              >
+                <span className="navbar-brand mb-0 h1 mx-auto" id="navbar">
+                  Noisely
+                </span>
+              </nav>
+            </Link>
           );
         }}
       </Consumer>

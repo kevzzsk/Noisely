@@ -91,6 +91,21 @@ div.container-fluid {
   padding: 0 50px;
 }
 
+#searchbar{
+    background-color: #333
+}
+
+i.fas.fa-search{
+    color:white
+}
+
+button.btn.btn-outline-dark.btn-lg.rounded-circle:hover i.fas.fa-search{
+    color:#07deb2
+}
+
+
+/* Create 5 column in a row */
+
 .col-2dot4,
 .col-sm-2dot4,
 .col-md-2dot4,
