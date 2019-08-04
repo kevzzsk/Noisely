@@ -12,7 +12,7 @@
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.0"
   },
-  "homepage":"https://kevzzsk.github.io/noisely",
+  "homepage":"https://kevzzsk.github.io/Noisely",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
