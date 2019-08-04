@@ -1,6 +1,11 @@
+:root{
+  --bg-color: #333;
+  --main-color: #08bd99;
+}
+
 .bg-container {
-  background-color: #333;
-  color: #08bd99;
+  background-color: var(--bg-color);
+  color: var(--main-color);
   position: fixed;
   padding: 0;
   margin: 0;
@@ -13,18 +18,18 @@
 }
 
 #navbar {
-  color: #07deb2;
+  color: var(--main-color);
 }
 
 h3.text-center.mb-4 {
-  color: #07deb2;
+  color: var(--main-color);
 }
 
 div.card-body {
   background-color: whitesmoke;
   height: 20vh;
   overflow: hidden;
-  color: #333;
+  color: var(--bg-color);
   padding: 12px;
 }
 div.col-md-3 {
@@ -35,7 +40,7 @@ a.btn.btn-dark.btn-block {
   vertical-align: center;
   display: inline-block;
   float: none;
-  color: #07deb2;
+  color: var(--main-color);
 }
 
 h5.track-name {
@@ -56,7 +61,7 @@ div.card-body.lyrics {
 
 p.card-text.lyrics,
 div.card-body.lyrics {
-  color: #333;
+  color: var(--bg-color);
   background-color: whitesmoke;
   white-space: pre;
 }
@@ -92,7 +97,7 @@ div.container-fluid {
 }
 
 #searchbar{
-    background-color: #333
+    background-color: var(--bg-color)
 }
 
 i.fas.fa-search{
@@ -100,7 +105,7 @@ i.fas.fa-search{
 }
 
 button.btn.btn-outline-dark.btn-lg.rounded-circle:hover i.fas.fa-search{
-    color:#07deb2
+    color:var(--main-color)
 }
 
 
