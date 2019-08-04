@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Noisely/static/css/main.afde3df8.chunk.css",
+    "main.css": "/Noisely/static/css/main.2a9fa4d9.chunk.css",
     "main.js": "/Noisely/static/js/main.b0184338.chunk.js",
     "main.js.map": "/Noisely/static/js/main.b0184338.chunk.js.map",
     "runtime~main.js": "/Noisely/static/js/runtime~main.012eabec.js",
@@ -9,10 +9,10 @@
     "static/js/2.44a8cb37.chunk.js": "/Noisely/static/js/2.44a8cb37.chunk.js",
     "static/js/2.44a8cb37.chunk.js.map": "/Noisely/static/js/2.44a8cb37.chunk.js.map",
     "index.html": "/Noisely/index.html",
-    "precache-manifest.cfc5c38a556e6ead1a74119a1bae0772.js": "/Noisely/precache-manifest.cfc5c38a556e6ead1a74119a1bae0772.js",
+    "precache-manifest.c53cba2323d062306021ddd8b70ed042.js": "/Noisely/precache-manifest.c53cba2323d062306021ddd8b70ed042.js",
     "service-worker.js": "/Noisely/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/Noisely/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.afde3df8.chunk.css.map": "/Noisely/static/css/main.afde3df8.chunk.css.map",
+    "static/css/main.2a9fa4d9.chunk.css.map": "/Noisely/static/css/main.2a9fa4d9.chunk.css.map",
     "static/media/Album.jpeg": "/Noisely/static/media/Album.ed77ed81.jpeg"
   }
 }
