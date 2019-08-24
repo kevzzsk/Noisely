@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4279c087ce68f140efbbba57c369d933",
+    "revision": "1ad5331a170e06fb4d43f8f46c11f749",
     "url": "/Noisely/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Noisely/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "56d5ed3b4a00debab636",
+    "revision": "aaf8a44a255f1877aa4b",
     "url": "/Noisely/static/css/main.2a9fa4d9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Noisely/static/js/2.44a8cb37.chunk.js"
   },
   {
-    "revision": "56d5ed3b4a00debab636",
-    "url": "/Noisely/static/js/main.27adf2fc.chunk.js"
+    "revision": "aaf8a44a255f1877aa4b",
+    "url": "/Noisely/static/js/main.efd0aa45.chunk.js"
   },
   {
     "revision": "29f9d521b8c6d1cbe2ea",
