@@ -10,7 +10,7 @@ import Lyrics from "./components/tracks/Lyrics";
 function App() {
   return (
     <Provider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="bg-container" id="bg-dark">
           <AppBar />
           <div className="container-fluid">
